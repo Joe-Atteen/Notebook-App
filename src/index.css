@@ -1,13 +1,78 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Questrial&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Questrial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  padding: 0 20rem;
+}
+
+.landing-page {
+  padding: 2rem 0;
+}
+
+.landing-page h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ff004c;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  border: 1px solid #999999;
+  margin-bottom: 40px;
+}
+
+.plus {
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid #999999;
+  border-radius: 5rem;
+  padding: 1.35rem;
+  position: absolute;
+  top: 13%;
+  left: 82%;
+  transform: translate(-82%, -13%);
+  cursor: pointer;
+}
+
+.plus:hover {
+  background: #e8e8e8;
+}
+
+.plus svg:hover {
+  color: #323232;
+}
+
+.plus svg {
+  font-size: 2rem;
+  color: #999999;
+}
+
+.input {
+  height: 3rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  font-size: 16px;
+}
+
+.text-input {
+  height: 10rem;
+}
+
+.btn {
+  width: 20rem;
+  height: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: #ff004c;
+  color: #e8e8e8;
+  border-radius: 5px;
 }
