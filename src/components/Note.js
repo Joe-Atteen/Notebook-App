@@ -19,7 +19,7 @@ function Note({ noteInfo, editNote }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Edit Note</Modal.Title>
+          <Modal.Title></Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <EditNote
@@ -29,19 +29,19 @@ function Note({ noteInfo, editNote }) {
           />
         </Modal.Body>
       </Modal>
-      <Col md={2} style={{ width: "15rem", marginBottom: "10px" }}>
-        <Card>
-          <Card.Body>
-            <Card.Title>Name: {noteInfo.title}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              Contact: {noteInfo.date}
+      <Col md={2}>
+        <Card className="card">
+          <Card.Body className="body">
+            <Card.Title className="title">{noteInfo.title}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted date">
+              {noteInfo.date}
             </Card.Subtitle>
-            <Card.Text>Location: {noteInfo.text}</Card.Text>
-            <Button href="#" size="sm" variant="primary" onClick={handleShow}>
-              Edit
+            <Card.Text className="card-text">{noteInfo.text}</Card.Text>
+            <Button href="#" size="sm" className="btn3" onClick={handleShow}>
+              EDIT
             </Button>
-            <Button href="#" size="sm" variant="danger" onClick={deleteNote}>
-              Delete
+            <Button href="#" size="sm" className="btn4" onClick={deleteNote}>
+              DELETE
             </Button>
           </Card.Body>
         </Card>

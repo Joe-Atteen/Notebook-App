@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useDispatch } from "react-redux";
 import { AddNewNote } from "../action/NoteAction";
 
-const InputForm = () => {
+const InputForm = (props) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [text, setText] = useState("");
@@ -18,17 +18,23 @@ const InputForm = () => {
     setTitle("");
     setDate("");
     setText("");
+    props.onCancel();
   };
+
+  function closeForm() {
+    props.onCancel();
+  }
 
   return (
     <div>
-      <Form>
+      <Form className="form">
+        <h1>ADD TO NOTES</h1>
         <Form.Group className="mb-3" controlId="Title">
           <Form.Label></Form.Label>
           <Form.Control
             className="input"
             type="title"
-            placeholder="Title"
+            placeholder="Enter Title"
             value={title}
             onChange={(e) => {
               setTitle(e.target.value);
@@ -59,8 +65,11 @@ const InputForm = () => {
             }}
           />
         </Form.Group>
-        <Button className="btn" onClick={handleSubmit}>
-          DONE
+        <Button className="btn1" onClick={handleSubmit}>
+          SAVE
+        </Button>
+        <Button className="btn2" onClick={closeForm}>
+          CANCEL
         </Button>
       </Form>
     </div>

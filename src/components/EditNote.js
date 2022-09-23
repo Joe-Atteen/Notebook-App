@@ -22,12 +22,14 @@ const EditNote = (props) => {
 
   return (
     <div>
-      <Form>
+      <Form className="edit-form">
+        <h1 className="heading">Edit Note</h1>
         <Form.Group className="mb-3" controlId="Title">
           <Form.Label></Form.Label>
           <Form.Control
+            className="edit-title"
             type="title"
-            placeholder="Title"
+            placeholder="Enter Title"
             value={title}
             onChange={(e) => {
               setTitle(e.target.value);
@@ -37,6 +39,7 @@ const EditNote = (props) => {
         <Form.Group className="mb-3" controlId="Date">
           <Form.Label></Form.Label>
           <Form.Control
+            className="edit-date"
             type="date"
             placeholder="Enter date"
             value={date}
@@ -49,6 +52,7 @@ const EditNote = (props) => {
         <Form.Group className="mb-3" controlId="Text">
           <Form.Label></Form.Label>
           <Form.Control
+            className="edit-text"
             type="text"
             placeholder="Enter text"
             value={text}
@@ -58,8 +62,8 @@ const EditNote = (props) => {
           />
         </Form.Group>
 
-        <Button onClick={handleSubmit} classvariant="primary" type="submit">
-          Submit
+        <Button onClick={handleSubmit} className="edit-btn" type="submit">
+          DONE
         </Button>
       </Form>
     </div>
